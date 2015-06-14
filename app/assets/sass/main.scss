@@ -1,0 +1,33 @@
+// =======================================================================================================================
+// # VENDORS
+// =======================================================================================================================
+
+// COMPASS
+@import "compass/css3/";
+
+// FOUNDATION
+@import "../../foundation/scss/normalize";
+@import "../../foundation/scss/foundation/settings";
+@import "../../foundation/scss/foundation";
+
+//=======================================================================================================================
+
+// reset
+@import "reset";
+
+table {
+  width: 100%;
+}
+
+.loader {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+[data-js="target"] {
+  width: 80%;
+  margin: 0 auto;
+}
+
+

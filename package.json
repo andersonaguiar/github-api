@@ -1,0 +1,33 @@
+{
+  "name": "gitgub-api",
+  "version": "0.0.1",
+  "title": "gitgub-api",
+  "description": "gitgub-api",
+  "author": {
+    "name": "Anderson Aguiar",
+    "email": "andersonaguiar.web@gmail.com",
+    "url": "https://github.com/andersonaguiar"
+  },
+  "maintainers": [],
+  "devDependencies": {
+    "browser-sync": "^2.6.0",
+    "chai": "^2.1.1",
+    "gulp": "*",
+    "gulp-compass": "^2.0.4",
+    "gulp-concat": "*",
+    "gulp-istanbul": "^0.6.0",
+    "gulp-load-plugins": "*",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-mocha": "^2.0.0",
+    "gulp-sass": "^1.3.2",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-uglify": "~0.1.0",
+    "gulp-util": "~2.2.9",
+    "gulp-webserver": "^0.9.1",
+    "matchdep": "^0.3.0",
+    "require-dir": "^0.1.0"
+  },
+  "scripts": {
+    "preinstall": "./installDependencies.sh"
+  }
+}

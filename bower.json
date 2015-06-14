@@ -1,0 +1,14 @@
+{
+  "name": "github-api",
+  "version": "0.0.1",
+  "authors": [
+    "Anderson Aguiar <andersonaguiar.web@gmail.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "react": "*",
+    "backbone": "*",
+    "jquery": "*",
+    "requirejs": "*"
+  }
+}
