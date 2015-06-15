@@ -2,11 +2,11 @@
 
 ## Rodando a aplicação
 
-npm install
+`npm install`
 
-gulp build
+`gulp build`
 
-gulp server
+`gulp server`
 
 ## Escolha das tecnologias
 
