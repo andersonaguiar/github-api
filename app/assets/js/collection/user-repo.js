@@ -2,13 +2,13 @@ define(
   'collection/repo/user',
   [
     'collection/repo',
-    'model/repo/user'
+    'model/repo'
   ],
-  function (RepoCollection, UserRepoModel) {
+  function (RepoCollection, RepoModel) {
     'use strict';
 
     var UserRepoCollection = RepoCollection.extend({
-      model: UserRepoModel,
+      model: RepoModel,
       url: 'https://api.github.com/users/andersonaguiar/repos',
 
       parse: function(response) {

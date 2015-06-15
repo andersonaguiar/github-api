@@ -18,6 +18,10 @@ var configMap = [
     modulePath: 'vendor/backbone/backbone-min'
   },
   {
+    module: 'localstorage',
+    modulePath: 'vendor/backbone.localStorage/backbone.localStorage-min'
+  },
+  {
     module: 'react',
     modulePath: 'vendor/react/react'
   },
@@ -30,16 +34,36 @@ var configMap = [
     modulePath: 'assets/js/model/repo'
   },
   {
-    module: 'model/repo/user',
-    modulePath: 'assets/js/model/user-repo'
+    module: 'model/repo/starred',
+    modulePath: 'assets/js/model/starred-repo'
+  },
+  {
+    module: 'model/repo/contribuitor',
+    modulePath: 'assets/js/model/contribuitor-repo'
+  },
+  {
+    module: 'model/repo/language',
+    modulePath: 'assets/js/model/language-repo'
   },
   {
     module: 'collection/repo',
     modulePath: 'assets/js/collection/repo'
   },
   {
+    module: 'collection/repo/starred',
+    modulePath: 'assets/js/collection/repo-starred'
+  },
+  {
     module: 'collection/repo/user',
     modulePath: 'assets/js/collection/user-repo'
+  },
+  {
+    module: 'collection/repo/contribuitor',
+    modulePath: 'assets/js/collection/contribuitor-repo'
+  },
+  {
+    module: 'collection/repo/language',
+    modulePath: 'assets/js/collection/language-repo'
   },
   {
     module: 'router',
@@ -56,6 +80,10 @@ var configMap = [
   {
     module: 'components/repos/starred',
     modulePath: 'assets/js/components/starred-repos'
+  },
+  {
+    module: 'components/repo/details',
+    modulePath: 'assets/js/components/repo-details'
   },
   {
     module: 'components/loader',

@@ -12,6 +12,7 @@
   "devDependencies": {
     "browser-sync": "^2.6.0",
     "chai": "^2.1.1",
+    "should": "*",
     "gulp": "*",
     "gulp-compass": "^2.0.4",
     "gulp-concat": "*",

@@ -4,9 +4,11 @@ define(
     'use strict';
 
     var RepoModel = Backbone.Model.extend({
-      defults: {
+      defaults: {
         description: ''
       },
+
+      urlRoot: 'https://api.github.com/repos/',
 
       parse: function (payload) {
         var defaults = {};

@@ -10,6 +10,9 @@ var path = {
 global['config'] = module.exports = {
   src:  path.src,
   dest: path.dest,
+  tests: {
+    src: path.src + '/tests/**/*'
+  },
   js: {
     src:  path.src + '/assets/js/**/*.js',
     dest: path.dest + '/assets/js'

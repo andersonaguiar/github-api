@@ -10,5 +10,8 @@
     "backbone": "*",
     "jquery": "*",
     "requirejs": "*"
+  },
+  "dependencies": {
+    "backbone.localStorage": "~1.1.16"
   }
 }

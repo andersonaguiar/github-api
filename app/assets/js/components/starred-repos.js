@@ -1,101 +1,94 @@
 define(
   'components/repos/starred',
   [
-    'react'
+    'react',
+    'collection/repo',
+    'collection/repo/starred',
+    'components/repos'
   ],
-  function (React) {
+  function (React, RepoCollection, StarredRepoCollection, ComponentRepos) {
     'use strict';
 
-    var Repo = React.createClass({
-      render: function() {
-        var repo = this.props.repo;
+    var Results = React.createClass({
+      getInitialState: function () {
+        return {
+          repoCollection: this.props.repoCollection
+        };
+      },
 
+      render: function () {
         return (
-          React.DOM.tr(
+          React.DOM.div(
             {},
-            React.DOM.td(
-              {},
-              React.DOM.a(
-                {
-                  href: repo.get('html_url'),
-                  target: '_blank'
-                },
-                repo.get('name')
-              )
-            ),
-            React.DOM.td(
-              {},
-              repo.get('description')
-            ),
-            React.DOM.td(
-              {},
-              (!!repo.get('fork') ? 'Sim' : 'Não')
+            React.createElement(
+              ComponentRepos,
+              {
+                repos: this.state.repoCollection
+              }
             )
           )
         );
       }
     });
 
-    var Repos = React.createClass({
-      getInitialState: function() {
-        return { repos: this.props.repos };
+    var StarredRepos = React.createClass({
+      getInitialState: function () {
+        return {
+          repoCollection: null
+        }
       },
 
-      componentWillMount: function() {
-        // get repos
-        var repos = this.props.repos;
-
-        console.log(repos)
-
-        repos.once('sync', function() {
-          this.forceUpdate();
-        }, this);
+      componentDidMount: function () {
+        this.getStarredRepos();
+        this.bindEvents();
       },
 
-      componentDidMount: function() { },
+      bindEvents: function () {
+        // Backbone.Events.on('repo:starred', _.bind(function (starredRepoCollection) {
+        //   this.setState({
+        //     repoCollection: {}
+        //   });
 
-      render: function() {
-        var repos = this.state.repos.map(function(repo) {
-          return React.createElement(Repo, {repo: repo});
-        });
+        //   // Backbone.Events.trigger('results:fetch', starredRepoCollection);
+        // }, this));
+      },
+
+      getStarredRepos: function () {
+        var starredRepoCollection = new StarredRepoCollection();
+
+        // get starred repos from local storage
+        starredRepoCollection.fetch()
+          .done(_.bind(function(){
+            App.StarredRepos = starredRepoCollection;
+
+            this.setState({
+              repoCollection: starredRepoCollection
+            });
+          }, this));
+      },
+
+      render: function () {
+        if (!this.state.repoCollection)
+          return false;
 
         return (
           React.DOM.div(
             {},
             React.DOM.h1(
               {},
-              'Repositórios de Anderson Aguiar'
+              'Repositórios favoritados'
             ),
-            React.DOM.table(
-              {},
-              React.DOM.thead(
-                {},
-                React.DOM.tr(
-                  {},
-                  React.DOM.th(
-                    {width: 200},
-                    'Nome'
-                  ),
-                  React.DOM.th(
-                    {},
-                    'Descrição'
-                  ),
-                  React.DOM.th(
-                    {},
-                    'Fork?'
-                  )
-                )
-              ),
-              React.DOM.tbody(
-                {},
-                repos
-              )
+            React.createElement(
+              Results,
+              {
+                repoCollection: this.state.repoCollection
+              }
             )
           )
-        );
+        )
       }
     });
 
-    return Repos;
+    return StarredRepos;
   }
 );
