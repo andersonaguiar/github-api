@@ -238,7 +238,7 @@ define(
         var repoModel                    = new RepoModel();
         var repoContribuitorsCollection  = new RepoContribuitorsCollection();
         var repoLanguagesCollection      = new RepoLanguagesCollection();
-        var repoTarget = this.props.owner + '/' + this.props.name;
+        var repoTarget                   = this.props.owner + '/' + this.props.name;
 
         repoModel.url = repoModel.urlRoot + repoTarget;
         repoModel.fetch()
@@ -263,8 +263,6 @@ define(
               repo: repoModel.set({languages: repoLanguagesCollection})
             });
           }, this));
-
-
       },
 
       render: function() {

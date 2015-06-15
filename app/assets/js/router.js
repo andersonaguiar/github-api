@@ -14,11 +14,11 @@ define(
 
     var Router = Backbone.Router.extend({
       routes: {
-          '': 'userRepos',
-          'repos/user': 'userRepos',
-          'repos': 'repos',
-          'repos/starred': 'reposStarred',
-          'repos/:owner/:name': 'repoDetails'
+          ''                    : 'userRepos',
+          'repos/user'          : 'userRepos',
+          'repos'               : 'repos',
+          'repos/starred'       : 'reposStarred',
+          'repos/:owner/:name'  : 'repoDetails'
       },
 
       initialize: function(callback) {
@@ -44,7 +44,13 @@ define(
       },
 
       repoDetails: function(owner, name) {
-        React.render(React.createElement(ComponentRepoDetails, {owner: owner, name: name}), $('[data-js="target"]')[0]);
+        React.render(React.createElement(
+          ComponentRepoDetails,
+          {
+            owner: owner,
+            name: name
+          }
+        ), $('[data-js="target"]')[0]);
       }
 
     });

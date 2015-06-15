@@ -40,17 +40,6 @@ define(
 
       componentDidMount: function () {
         this.getStarredRepos();
-        this.bindEvents();
-      },
-
-      bindEvents: function () {
-        // Backbone.Events.on('repo:starred', _.bind(function (starredRepoCollection) {
-        //   this.setState({
-        //     repoCollection: {}
-        //   });
-
-        //   // Backbone.Events.trigger('results:fetch', starredRepoCollection);
-        // }, this));
       },
 
       getStarredRepos: function () {

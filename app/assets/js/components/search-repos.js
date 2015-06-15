@@ -18,8 +18,6 @@ define(
 
         var q = this.refs.q.getDOMNode().value;
 
-        // {data: {page: 3}}
-
         var repoCollection = new RepoCollection;
         repoCollection.url += '?q=' + q;
         repoCollection.fetch();

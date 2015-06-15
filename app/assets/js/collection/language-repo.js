@@ -1,8 +1,5 @@
 define(
   'collection/repo/language',
-  [
-    'model/repo/language'
-  ],
   function (RepoCollection, RepoLanguageModel) {
     'use strict';
 

@@ -38,14 +38,6 @@ var configMap = [
     modulePath: 'assets/js/model/starred-repo'
   },
   {
-    module: 'model/repo/contribuitor',
-    modulePath: 'assets/js/model/contribuitor-repo'
-  },
-  {
-    module: 'model/repo/language',
-    modulePath: 'assets/js/model/language-repo'
-  },
-  {
     module: 'collection/repo',
     modulePath: 'assets/js/collection/repo'
   },

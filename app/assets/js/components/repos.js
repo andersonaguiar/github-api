@@ -142,15 +142,7 @@ define(
         // get starred repos from local storage
         starredRepoCollection.fetch()
           .done(_.bind(function(){
-            // starredRepoCollection.each(function(model){
-            //   model.destroy()
-            // });
-
-            // console.log(starredRepoCollection)
-
             App.StarredRepos = starredRepoCollection;
-
-            // console.log(starredRepoCollection)
 
             this.setState({
               starreds: starredRepoCollection

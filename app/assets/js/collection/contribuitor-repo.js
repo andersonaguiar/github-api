@@ -1,8 +1,5 @@
 define(
   'collection/repo/contribuitor',
-  [
-    'model/repo/contribuitor'
-  ],
   function (RepoCollection, RepoContribuitorModel) {
     'use strict';
 

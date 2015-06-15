@@ -9,9 +9,7 @@
     "react": "*",
     "backbone": "*",
     "jquery": "*",
-    "requirejs": "*"
-  },
-  "dependencies": {
+    "requirejs": "*",
     "backbone.localStorage": "~1.1.16"
   }
 }
