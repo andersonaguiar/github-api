@@ -3,7 +3,9 @@
 ## Rodando a aplicação
 
 npm install
+
 gulp build
+
 gulp server
 
 ## Escolha das tecnologias
