@@ -7,9 +7,10 @@ define(
     'components/repos',
     'components/repos/search',
     'components/repos/starred',
-    'components/repo/details'
+    'components/repo/details',
+    'components/topbar'
   ],
-  function (React, RepoCollection, UserRepoCollection, ComponentRepos, ComponentSearchRepos, ComponentStarredRepos, ComponentRepoDetails) {
+  function (React, RepoCollection, UserRepoCollection, ComponentRepos, ComponentSearchRepos, ComponentStarredRepos, ComponentRepoDetails, ComponentTopBar) {
     'use strict';
 
     var Router = Backbone.Router.extend({
@@ -22,6 +23,7 @@ define(
       },
 
       initialize: function(callback) {
+        React.render(React.createElement(ComponentTopBar), $('[data-js="topbar"]')[0]);
         callback();
       },
 

@@ -80,6 +80,10 @@ var configMap = [
   {
     module: 'components/loader',
     modulePath: 'assets/js/components/loader'
+  },
+  {
+    module: 'components/topbar',
+    modulePath: 'assets/js/components/topbar'
   }
 ];
 
