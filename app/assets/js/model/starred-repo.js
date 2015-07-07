@@ -3,9 +3,7 @@ define(
   function () {
     'use strict';
 
-    var RepoStarredModel = Backbone.Model.extend({
-
-    });
+    var RepoStarredModel = Backbone.Model.extend();
 
     return RepoStarredModel;
   }
